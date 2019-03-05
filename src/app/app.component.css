@@ -1,0 +1,18 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+    main {
+        flex: 1 0 auto;
+    }
+
+.no-margin {
+    margin: 0 0 0 0;
+}
+
+    .no-margin-top { margin-top: 0 !important;}
+    .no-margin-bottom { margin-bottom: 0 !important; }
+    .no-margin-right { margin-right: 0 !important; }
+    .no-margin-left { margin-left: 0 !important; }

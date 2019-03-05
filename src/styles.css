@@ -1,1 +1,25 @@
-/* You can add global styles to this file, and also import other style files */
+.no-margin {
+    padding: 0 0 0 0;
+}
+
+    .no-margin-top    { margin-top: 0 !important;}
+    .no-margin-bottom { margin-bottom: 0 !important; }
+    .no-margin-right  { margin-right: 0 !important; }
+    .no-margin-left   { margin-left: 0 !important; }
+
+.no-padding {
+    padding: 0 0 0 0;
+}
+
+    .no-padding-top    { padding-top: 0 !important;}
+    .no-padding-bottom { padding-bottom: 0 !important; }
+    .no-padding-right  { padding-right: 0 !important; }
+    .no-padding-left   { padding-left: 0 !important; }
+
+img {
+    width: 100%;
+    height: auto;
+    max-height: 50%;
+    /* max-width: 100%;
+    width: auto\9; /* ie8 */
+}

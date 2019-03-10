@@ -1,7 +1,6 @@
 img.bg {
   /* Set rules to fill background */
-  min-height: 92%;
-  min-width: 1024px;
+  min-height: 100%;
 	
   /* Set up proportionate scaling */
   width: 100%;
@@ -15,8 +14,32 @@ img.bg {
 
 @media screen and (max-width: 1024px) { /* Specific to this particular image */
     img.bg {
+        z-index: -1;
         margin-top: 5%;
         left: 50%;
-        margin-left: -512px;   /* 50% */
+        margin-left: -512px;
     }
   }
+
+.texto-home {
+    color: white;
+    font-size: 6em;
+    font-family: "Srisakdi";
+}
+
+.centered {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+}
+
+.txt-faltam-dias {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    color: white;
+    font-size: 3em;
+    font-family: "Srisakdi";
+    transform: translate(-50%, -50%);    
+}

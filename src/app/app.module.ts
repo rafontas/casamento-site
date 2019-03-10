@@ -24,7 +24,7 @@ import { FooterCompComponent } from './footer-comp/footer-comp.component';
     CasamentoComponent,
     ContatoComponent,
     PagNaoEncontradaComponent,
-    FooterCompComponent
+    FooterCompComponent,
   ],
   imports: [
     BrowserModule,

@@ -23,9 +23,9 @@ export class GaleriaComponent implements AfterViewInit {
 
   ngAfterViewInit (){
     // $(document)s
-    console.log('Porra - auhasuhaskluh');
-    var element = document.querySelector('.carousel');
-    var instance = M.carousel.init(element, this.options);
+    console.log('Porra');
+    // var element = document.querySelector('.carousel');
+    // var instance = M.carousel.init(element, this.options);
   }
 
 }

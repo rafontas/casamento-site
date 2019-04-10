@@ -23,11 +23,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "../casamento-site/vendor/fancybox-master/css/jquery.fancybox.min.css"
             ],
             "scripts": [
               "../casamento-site/node_modules/jquery/dist/jquery.min.js",
-              "../casamento-site/node_modules/materialize-css/js/materialize.min.js"
+              "../casamento-site/node_modules/materialize-css/js/materialize.min.js",
+              "../casamento-site/vendor/fancybox-master/js/jquery.fancybox.min.js"
             ]
           },
           "configurations": {

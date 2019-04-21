@@ -24,12 +24,12 @@
             ],
             "styles": [
               "src/styles.css",
-              "../casamento-site/vendor/fancybox-master/css/jquery.fancybox.min.css"
+              "./vendor/fancybox-master/css/jquery.fancybox.min.css"
             ],
             "scripts": [
-              "../casamento-site/node_modules/jquery/dist/jquery.min.js",
-              "../casamento-site/node_modules/materialize-css/js/materialize.min.js",
-              "../casamento-site/vendor/fancybox-master/js/jquery.fancybox.min.js"
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/materialize-css/js/materialize.min.js",
+              "./vendor/fancybox-master/js/jquery.fancybox.min.js"
             ]
           },
           "configurations": {
@@ -80,8 +80,8 @@
               "src/styles.css"
             ],
             "scripts": [
-              "../casamento-site/node_modules/jquery/dist/jquery.min.js",
-              "../casamento-site/node_modules/materialize-css/js/materialize.min.js"
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/materialize-css/js/materialize.min.js"
             ],
             "assets": [
               "src/favicon.ico",

@@ -24,6 +24,5 @@ describe('ToolBarComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
   
 });

@@ -3,9 +3,7 @@
     <li>
         <div class="user-view">
             <div class="background blue">
-                <!-- <img src="images/office.jpg"> -->
             </div>
-            <!-- <a href="#!user"><img class="circle" src="images/yuna.jpg"></a> -->
         </div>
     </li>
     <li><a href="#" title="">Bem Vindos</a></li>
@@ -17,23 +15,36 @@
 </ul>
 
 <!-- Nav-bar para telas grandes. -->
-<div class="navbar-fixed">
-    <nav class="grey darken-4 navbar-web transparent">
-        <div class="container">
-            <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">Menu</i></a>
-            <div class="nav-wrapper">
-                <a href="#inicio">
-                    <img src="" alt="">
-                </a>
-                <ul id="nav-web" class="left hide-on-med-and-down">
-                    <li><a routerLink="/home" title=""><span class="no-opacity">Bem Vindos</span></a></li>
-                    <li><a routerLink="/confirmar" title="">Confirmar Presença</a></li>
-                    <li><a routerLink="/presentes" title="">Lista de Presentes</a></li>
-                    <li><a routerLink="/fotos" title="">Galeria</a></li>
-                    <li><a routerLink="/casamento" title="">Casameto</a></li>
-                    <li><a routerLink="/contato" title="">Contato</a></li>
-                </ul>
+<div class="row">
+
+    <!-- <img class="img-toolbar" src="../../../vendor/icons/BRIDE AND GROOM.svg" alt="Noiva e Noivo" /> -->
+
+    <div class="navbar-fixed">
+
+        <nav class="grey darken-4 navbar-web transparent">
+
+            <div class="container">
+                <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">Menu</i></a>
+                <div class="nav-wrapper">
+                    <a href="#inicio">
+                        <img src="" alt="">
+                    </a>
+                    <ul id="nav-web" class="left hide-on-med-and-down">
+                        <li><a (click)="clickToolbar($event)" routerLink="/home" id="home" title=""><span class="no-opacity">Bem Vindos</span></a></li>
+                        <li><a (click)="clickToolbar($event)" routerLink="/confirmar" id="confirmar" title="">Confirmar Presença</a></li>
+                        <li><a routerLink="/presentes"  id="presentes" title="">Lista de Presentes</a></li>
+                        <li><a routerLink="/fotos"   id="presentes" title="">Galeria</a></li>
+                        <li>
+
+                            <a routerLink="/casamento" title=""> 
+                                Casameto &nbsp;
+                                <!-- <img class="img-toolbar svg" src="../../../vendor/icons/WEDDING LOCATION.svg" alt="Noiva e Noivo" /> -->
+                            </a>
+                        </li>
+                        <li><a routerLink="/contato" title="">Contato</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </div>
 </div>

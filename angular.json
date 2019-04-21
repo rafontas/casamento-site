@@ -27,8 +27,8 @@
               "./vendor/fancybox-master/css/jquery.fancybox.min.css"
             ],
             "scripts": [
-              "./node_modules/jquery/dist/jquery.min.js",
-              "./node_modules/materialize-css/js/materialize.min.js",
+              "./vendor/jquery/dist/jquery.min.js",
+              "./vendor/materialize-css/js/materialize.min.js",
               "./vendor/fancybox-master/js/jquery.fancybox.min.js"
             ]
           },
@@ -80,8 +80,8 @@
               "src/styles.css"
             ],
             "scripts": [
-              "./node_modules/jquery/dist/jquery.min.js",
-              "./node_modules/materialize-css/js/materialize.min.js"
+              "./vendor/jquery/dist/jquery.min.js",
+              "./vendor/materialize-css/js/materialize.min.js"
             ],
             "assets": [
               "src/favicon.ico",

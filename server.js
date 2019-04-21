@@ -13,10 +13,12 @@ app.get('/*', function(req, res) {
 });
 
 // default Heroku port
-// app.listen(server_port, server_host, function(){
-//     console.log('Erro ao iniciar');
-// });
+app.listen(server_port, function(){
+    console.log('Erro ao iniciar');
+});
     
- server.listen(server_port, function() {
-     console.log('Listening on port %d', server_port);
- });
+//  server.listen(server_port, function() {
+//      console.log('Listening on port %d', server_port);
+//  });
+//  
+// server.listen(server_port);

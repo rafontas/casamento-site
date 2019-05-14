@@ -1,7 +1,11 @@
 .navbar-web {
-    opacity: 0.7 !important;
+    background-color: rgba(13, 13, 13, .7) !important;
 }
 
 .navbar-web li:hover{
-    background-color:teal;
+    background-color: rgba(0, 150, 150, .7) !important;
+}
+
+.rota-clicada {
+    background-color: rgba(0, 150, 150, .7) !important;
 }

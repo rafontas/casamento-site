@@ -10,7 +10,7 @@ if (process.env.NODE_ENV === 'production') {
 
 // app.use(express.static('dist'));
 app.get('*', (request, response) => {
-    response.sendFile(path.join(__dirname, 'dist', 'index.html'));
+    response.sendFile(path.join(__dirname, 'dist/casamento-site', 'index.html'));
 });
 
 app.listen(server_port, server_host, function() {

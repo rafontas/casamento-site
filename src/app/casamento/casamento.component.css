@@ -1,7 +1,13 @@
+.posicao {
+    position: absolute;
+    left: 15%;
+    top: 45%;
+}
 
 .font-casamentos {
+    color: white;
+    text-shadow: 3px 3px 3px black;
     font-family: 'Dancing Script', cursive;
-    text-shadow: 3px 3px 3px whitesmoke;
 }
 
 .font-size-3 {

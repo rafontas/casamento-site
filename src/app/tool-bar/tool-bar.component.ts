@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { Router } from "@angular/router";
+import { ToolBarService } from './tool-bar.service';
 
 @Component({
   selector: 'app-tool-bar',
@@ -20,7 +21,7 @@ export class ToolBarComponent implements OnInit {
     this.coloreItemEscolhido(itemClicado.id);
   }
   
-  private coloreItemEscolhido (item : string) {
+  public coloreItemEscolhido (item : string) {
     
     item = item.replace ('/', '');
     $('#nav-web li').removeClass('rota-clicada');

@@ -2,3 +2,9 @@ div.imglist a {
     margin-right: 5px;
     margin-bottom: 5px;
 }
+
+.titulo-galeria {
+    color: black;
+    font-size: 6em;
+    font-family:  'Shadows Into Light', cursive;
+}

@@ -10,28 +10,28 @@
   <!-- Nome do Convidado -->
   <div class="row">
     <div class="input-field col s12 offset-m3 m6">
-      <input id="nome-convidado" type="text" name="nome-convidado">
+      <input id="nome-convidado" [(ngModel)]="contatoEmTela.nome" type="text" name="nome-convidado">
       <label for="nome-convidado">Nome</label>
     </div>
   </div>
   <!-- Email Convidado -->
   <div class="row">
     <div class="input-field col s12 offset-m3 m6">
-      <input id="email-convidado" type="text" name="email-convidado">
+      <input id="email-convidado" [(ngModel)]="contatoEmTela.email" type="text" name="email-convidado">
       <label for="email-convidado">Email</label>
     </div>
   </div>
   <!-- Assunto -->
   <div class="row">
     <div class="input-field col s12 offset-m3 m6">
-      <input id="assunto" type="text" name="assunto">
+      <input id="assunto" [(ngModel)]="contatoEmTela.assunto" type="text" name="assunto">
       <label for="assunto">Assunto</label>
     </div>
   </div>
   <!-- Mensagem -->
   <div class="row">
     <div class="input-field col s12 offset-m3 m6">
-      <textarea id="mensagem" name="mensagem" class="materialize-textarea"> </textarea>
+      <textarea id="mensagem" [(ngModel)]="contatoEmTela.mensagem" name="mensagem" class="materialize-textarea"> </textarea>
       <label for="mensagem">Mensagem</label>
     </div>
   </div>
@@ -39,7 +39,7 @@
   <div class="row">
     <div class="input-field col s12 offset-m3 m6">
       <div class="right">
-        <a class="waves-effect waves-light btn">Enviar</a>
+        <a class="waves-effect waves-light btn" (click)="EnviaContato()">Enviar</a>
       </div>
     </div>
   </div>

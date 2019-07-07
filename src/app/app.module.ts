@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { ToolBarComponent } from './tool-bar/tool-bar.component';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http'
 import { ConfirmaPresencaComponent } from './confirma-presenca/confirma-presenca.component';
 import { PresentesComponent } from './presentes/presentes.component';
 import { GaleriaComponent } from './galeria/galeria.component';
@@ -12,7 +13,8 @@ import { CasamentoComponent } from './casamento/casamento.component';
 import { ContatoComponent } from './contato/contato.component';
 import { PagNaoEncontradaComponent } from './pag-nao-encontrada/pag-nao-encontrada.component';
 import { FooterCompComponent } from './footer-comp/footer-comp.component';
-// import { MaterializeModule } from "angular2-materialize";
+import { ConfirmaPresencaService } from './confirma-presenca/confirma-presenca-service';
+import { ContatoService } from './contato/contato.service';
 
 
 @NgModule({
@@ -31,10 +33,13 @@ import { FooterCompComponent } from './footer-comp/footer-comp.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule
-    // MaterializeModule
   ],
-  providers: [],
+  providers: [
+    ConfirmaPresencaService,
+    ContatoService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

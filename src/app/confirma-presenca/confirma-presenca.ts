@@ -3,7 +3,7 @@ export class ConfirmaPresenca {
     email : string;
     telefone : string;
     quantidadeAdultos : number;
-    quantidadeCriança : number;
+    quantidadeCrianca : number;
     mensagem : string;
     data : Date;
 }

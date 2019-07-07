@@ -1,5 +1,6 @@
 import { Component, OnInit, NgModule } from '@angular/core';
 import { Contato } from './contato';
+import { ContatoService } from './contato.service';
 
 @Component({
   selector: 'app-contato',
@@ -10,20 +11,29 @@ export class ContatoComponent implements OnInit {
 
   contatoEmTela : Contato = new Contato();
 
-  constructor() { }
+  constructor(private contatoService : ContatoService) { }
 
   ngOnInit() {
   }
 
-  EnviaContato() {
-    console.log(this.contatoEmTela);
+  clickEnviaContato() {
 
-    this.contatoEmTela = new Contato();
-    new M.Toast({
-      html: "Obrigado pelo contato! ;)",
-      displayLength: 5000,
-      classes: 'rounded'
-    });
+    this.contatoService.saveData(this.contatoEmTela)
+      .subscribe( res => {
+          new M.Toast({
+            html: "Obrigado pelo contato!",
+            displayLength: 5000
+          });
+        },
+        error => {
+          console.log(error);
+          new M.Toast({
+            html: "Opa, algo deu errado.",
+            displayLength: 5000
+          });        
+      });
+
+      this.contatoEmTela = new Contato();
   }
 
 }

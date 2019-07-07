@@ -13,7 +13,7 @@
   <!-- Nome do Convidado -->
   <div class="row">
     <div class="input-field col s12 offset-m3 m6">
-      <input id="nome-convidado" type="text" name="nome-convidado">
+      <input [(ngModel)]="confirmaPresenca.nome" id="nome-convidado" type="text" name="nome-convidado">
       <label for="nome-convidado">Nome</label>
     </div>
   </div>
@@ -21,7 +21,7 @@
   <!-- Email Convidado -->
   <div class="row">
     <div class="input-field col s12 offset-m3 m6">
-      <input id="email-convidado" type="text" name="email-convidado">
+      <input [(ngModel)]="confirmaPresenca.email" id="email-convidado" type="text" name="email-convidado">
       <label for="email-convidado">Email</label>
     </div>
   </div>
@@ -29,7 +29,7 @@
   <!-- Quantidade de Adultos -->
   <div class="row">
     <div class="input-field col s12 offset-m3 m6">
-      <input id="qtd-adultos" type="number" name="qtd-adultos">
+      <input [(ngModel)]="confirmaPresenca.quantidadeAdultos" id="qtd-adultos" type="number" name="qtd-adultos">
       <label for="qtd-adultos">Quantidade de Adultos</label>
     </div>
   </div>
@@ -37,7 +37,7 @@
   <!-- Quantidade de crianças -->
   <div class="row">
     <div class="input-field col s12 offset-m3 m6">
-      <input id="qtd-criancas" type="number" name="qtd-criancas">
+      <input [(ngModel)]="confirmaPresenca.quantidadeCrianca" id="qtd-criancas" type="number" name="qtd-criancas">
       <label for="qtd-criancas">Quantidade de Crianças</label>
     </div>
   </div>
@@ -45,7 +45,7 @@
   <!-- Mensagem -->
   <div class="row">
     <div class="input-field col s12 offset-m3 m6">
-      <textarea id="mensagem" name="mensagem" class="materialize-textarea"> </textarea>
+      <textarea [(ngModel)]="confirmaPresenca.mensagem" id="mensagem" name="mensagem" class="materialize-textarea"> </textarea>
       <label for="mensagem">Mensagem</label>
     </div>
   </div>
@@ -54,7 +54,7 @@
   <div class="row">
     <div class="input-field col s12 offset-m3 m6">
       <div class="right">
-        <a class="waves-effect waves-light btn">Enviar</a>
+        <a (click)="clickConfirmaPresenca()" class="waves-effect waves-light btn">Enviar</a>
       </div>
     </div>
   </div>

@@ -22,6 +22,11 @@ img.bg {
       }
     }
 
+.iframe-presentes{
+    width: 100%;
+    height: 800px;
+}
+
 .icon-presentes {
     font-size: 10em;
 }

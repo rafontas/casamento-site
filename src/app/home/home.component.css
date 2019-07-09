@@ -16,8 +16,8 @@ img.bg {
     img.bg {
         z-index: -1;
         margin-top: 5%;
-        left: 50%;
-        margin-left: -512px;
+        left: 0;
+        top: 0%;
     }
   }
 
@@ -26,8 +26,6 @@ img.bg {
     text-shadow: 3px 3px 3px black;
     font-size: 7em;
     font-family: 'Dancing Script', cursive;
-    position: absolute;
-    left: 30%;
     top: 10%;
 }
 

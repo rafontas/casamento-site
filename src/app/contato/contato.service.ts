@@ -24,7 +24,7 @@ export class ContatoService {
                 headers: new HttpHeaders().set('Content-Type', 'application/json') 
         };
 
-        return this.http.post(this.UrlPrd, JSON.stringify(contato), options)
+        return this.http.post(this.Url, JSON.stringify(contato), options)
             .pipe(
                 map ((res: any) => {
                     console.log(res);

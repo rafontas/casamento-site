@@ -9,18 +9,20 @@ export class HomeComponent implements AfterViewInit {
   ngAfterViewInit(): void {
   }
 
-  diasAteCasamento : number = 0; 
+  diasAteCasamento : number =  this.calcDiasAteCasamento ();
 
   constructor() { 
-    this.diasAteCasamento = this.calcDiasAteCasamento();
+    setInterval(() => {
+      this.diasAteCasamento = this.calcDiasAteCasamento ()
+    }, 1000);
   }
 
   calcDiasAteCasamento () : number {
 
     var date1 = new Date();
-    var date2 = new Date(2019, 9, 28, 16, 0);
+    var date2 = new Date(2019, 8, 28, 16, 30);
 
-    var diff = Math.abs(date1.getTime() - date2.getTime());
+    var diff = date2.getTime() - date1.getTime();
 
     return Math.ceil(diff / (1000 * 3600 * 24)); 
   }

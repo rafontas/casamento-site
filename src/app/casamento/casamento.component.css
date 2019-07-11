@@ -1,3 +1,31 @@
+.bg-image {
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    z-index: -1;
+    
+    /* Local da imagem */
+    background-image: url("../images/fundo/casamento.jpg");
+
+    /* Centraliza o Background */
+    background-position: center center;
+
+    /* Sem repetição */
+    background-repeat: no-repeat;
+    
+    /* Fixa a imagem pra não mover se a altura da tela for maio que a imagem */
+    background-attachment: fixed;
+
+    /* Redimensiona a imagem de acordo com a tela */
+    background-size: cover;
+
+    /* Cor de fundo ao carregar */
+    background-color:  gainsboro;
+}
+
 .posicao {
     position: absolute;
     left: 15%;

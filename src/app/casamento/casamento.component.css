@@ -26,16 +26,14 @@
     background-color:  gainsboro;
 }
 
-.mapa-pequeno {
-    position: absolute;
-    top: 130%;
-    left: 22%;
+.centro {
+    align-content: center !important;
+    box-align:center !important;
+    text-align: center !important;
 }
 
 .posicao {
-    position: absolute;
-    left: 15%;
-    top: 10%;
+    text-align: center !important;
 }
 
 .titulo {

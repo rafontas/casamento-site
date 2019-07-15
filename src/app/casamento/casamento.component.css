@@ -26,26 +26,37 @@
     background-color:  gainsboro;
 }
 
+.mapa-pequeno {
+    position: absolute;
+    top: 130%;
+    left: 22%;
+}
+
 .posicao {
     position: absolute;
     left: 15%;
-    top: 45%;
+    top: 10%;
+}
+
+.titulo {
+    color: white;
+    text-shadow: 3px 3px 3px black;
+    font-family: 'Cabin Sketch', cursive;    
+    font-size: 350%;
+    z-index: 1;
+    letter-spacing: 10px !important;
+}
+
+.convite-individual {
+    margin-top: 10em;
+    color: white;
+    font-size: 140%;
+    font-family: 'Amatic SC', cursive;
 }
 
 .font-casamentos {
     color: white;
     text-shadow: 3px 3px 3px black;
-    font-family: 'Dancing Script', cursive;
-}
-
-.font-size-3 {
-    font-size: 3em;
-}
-
-.font-size-5 {
-    font-size: 5em;
-}
-
-.font-size-4 {
-    font-size: 4em;
+    font-family: 'Amatic SC', cursive;
+    font-size: 250%;
 }

@@ -6,6 +6,7 @@
     background-color: rgba(0, 150, 150, .7) !important;
 }
 
-.rota-clicada {
-    background-color: rgba(0, 150, 150, .7) !important;
-}
+nav ul a {
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.5em;
+} 

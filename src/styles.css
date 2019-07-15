@@ -37,13 +37,40 @@ img.bg {
     }
 
     .shadow-form {
-        background-color: rgba(75, 75, 75, .7) !important;
+        background-color: rgba(75, 75, 75, .8) !important;
         position: absolute;
         left: 20%;
         width: 60%;
         height: 100%;
+        z-index: -1;
+        -webkit-animation: aparece-shadow-form 2s;
+        animation: aparece-shadow-form 2s;
+        -webkit-animation-delay: .5s;
+        animation-delay: .5s;
+        -webkit-animation-fill-mode: backwards;
+        animation-fill-mode: backwards;        
     }  
 
+    .aparece {
+        -webkit-animation: aparece-shadow-form 2s;
+        animation: aparece-shadow-form 2s;        
+        -webkit-animation-delay: .5s;
+        animation-delay: .5s;
+        -webkit-animation-fill-mode: backwards;
+        animation-fill-mode: backwards;
+    }
+
+    @-webkit-keyframes aparece-shadow-form {
+        from {
+            opacity: 0;
+        }
+    }    
+    
+    @keyframes aparece-shadow-form {
+        from {
+            opacity: 0;
+        }
+    }    
 
     input, textarea, .input-field label, .input-field .input {
         color: white;
@@ -63,4 +90,9 @@ img.bg {
     .input-field input[type=number]:focus + label
     {
         color: #fff !important;
+    }
+
+    
+    .rota-clicada {
+        background-color: rgba(0, 150, 150, .7) !important;
     }

@@ -14,5 +14,6 @@ div.imglist a {
 .titulo-galeria {
     color: black;
     text-shadow: 3px 3px 3px white;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Cabin Sketch', cursive;    
+    letter-spacing: 10px !important;
 }

@@ -1,7 +1,5 @@
 import { Component, OnInit, EventEmitter, Output, AfterViewInit } from '@angular/core';
 import { Router } from "@angular/router";
-import { ToolBarService } from './tool-bar.service';
-import { Options } from 'selenium-webdriver/opera';
 
 @Component({
   selector: 'app-tool-bar',

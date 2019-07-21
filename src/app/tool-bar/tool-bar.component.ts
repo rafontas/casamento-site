@@ -1,13 +1,14 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, AfterViewInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { ToolBarService } from './tool-bar.service';
+import { Options } from 'selenium-webdriver/opera';
 
 @Component({
   selector: 'app-tool-bar',
   templateUrl: './tool-bar.component.html',
   styleUrls: ['./tool-bar.component.css']
 })
-export class ToolBarComponent implements OnInit {
+export class ToolBarComponent implements OnInit, AfterViewInit {
 
   rotaAtual : string = this.router.url;
 
@@ -18,18 +19,20 @@ export class ToolBarComponent implements OnInit {
   public clickToolbar($event) {
     var itemClicado = $event.target;
     itemClicado = itemClicado.parentNode;
+    console.log('Clickou : ' + itemClicado.id);
     this.coloreItemEscolhido(itemClicado.id);
   }
   
-  public coloreItemEscolhido (item : string) {
-    
+  public coloreItemEscolhido (item : string) 
+  {
     item = item.replace ('/', '');
-    $('#nav-web li').removeClass('rota-clicada');
-    $('#' + item).addClass('rota-clicada');
+    $('#nav-web li').removeClass('pag-ativa');
+    $('#' + item).addClass('pag-ativa');
+    console.log('#' + item);
   }
   
   ngAfterViewInit() {
-    // console.log('Chamou : ' + this.router.url);
+    console.log('Chamou : ' + this.router.url);
     this.coloreItemEscolhido(this.router.url);
   }
 

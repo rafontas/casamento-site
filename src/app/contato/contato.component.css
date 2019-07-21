@@ -41,6 +41,14 @@
     font-family: 'Amatic SC', cursive;
 }
 
+.campos-obrigatorio {
+    position: absolute;
+    color: rgb(159,159,159);
+    font-size: 80%;
+    bottom: 1%;
+    left: 21%;
+}
+
 textarea.materialize-textarea { 
     height: 2rem; 
 }

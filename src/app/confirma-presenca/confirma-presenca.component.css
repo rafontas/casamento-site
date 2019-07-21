@@ -26,13 +26,18 @@
     background-color:  gainsboro;
 }
 
-textarea.materialize-textarea{ 
-    height: 2rem; 
-}
 
 .titulo-confirma {
     font-size: 300%;
     color: white;
     text-shadow: 3px 3px 3px black;
     font-family: 'Cabin Sketch', cursive;    
+}
+
+.campos-obrigatorio {
+    position: absolute;
+    color: rgb(159,159,159);
+    font-size: 80%;
+    bottom: 1%;
+    left: 21%;
 }

@@ -15,6 +15,7 @@ import { PagNaoEncontradaComponent } from './pag-nao-encontrada/pag-nao-encontra
 import { FooterCompComponent } from './footer-comp/footer-comp.component';
 import { ConfirmaPresencaService } from './confirma-presenca/confirma-presenca-service';
 import { ContatoService } from './contato/contato.service';
+import { ColoreToolbarService } from './colore-toolbar.service';
 
 
 @NgModule({
@@ -28,7 +29,7 @@ import { ContatoService } from './contato/contato.service';
     CasamentoComponent,
     ContatoComponent,
     PagNaoEncontradaComponent,
-    FooterCompComponent, 
+    FooterCompComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +39,8 @@ import { ContatoService } from './contato/contato.service';
   ],
   providers: [
     ConfirmaPresencaService,
-    ContatoService
+    ContatoService,
+    ColoreToolbarService
   ],
   bootstrap: [AppComponent]
 })

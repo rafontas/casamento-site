@@ -5,22 +5,28 @@
 
   <h2 class="center titulo-contato">• CONTATO •</h2>
   <div class="contato-resposta center">Deixe sua mensagem. Responderemos em breve</div>
-
-  <div class="container">
+  
+  <div class="container contato-form">
+    <div class="campos-obrigatorio">* Campos obrigatórios</div>    
+    
     <!-- Nome do Convidado -->
     <div class="row">
       <div class="input-field col s12 offset-m3 m6">
-        <input id="nome-convidado" required [(ngModel)]="contatoEmTela.nome" type="text" name="nome-convidado">
-        <label for="nome-convidado">Nome *</label>
+        <input class="validate" id="nome-convidado" required [(ngModel)]="contatoEmTela.nome" type="text" name="nome-convidado">
+        <label for="nome-convidado">Nome e Sobrenome *</label>
+        <span class="helper-text" data-error="Preencha nome e sobrenome, por favor." data-success=""></span>
       </div>
     </div>
+
     <!-- Email Convidado -->
     <div class="row">
       <div class="input-field col s12 offset-m3 m6">
-        <input id="email-convidado" required [(ngModel)]="contatoEmTela.email" type="text" name="email-convidado">
+        <input class="validate" id="email-convidado" required [(ngModel)]="contatoEmTela.email" type="email" name="email-convidado">
         <label for="email-convidado">Email *</label>
+        <span class="helper-text" data-error="Opa, algo errado, tem '@'?." data-success=""></span>
       </div>
     </div>
+    
     <!-- Assunto -->
     <div class="row">
       <div class="input-field col s12 offset-m3 m6">
@@ -28,12 +34,13 @@
         <label for="assunto">Assunto</label>
       </div>
     </div>
+    
     <!-- Mensagem -->
     <div class="row">
       <div class="input-field col s12 offset-m3 m6">
-        <textarea id="mensagem" required [(ngModel)]="contatoEmTela.mensagem" rows="5" name="mensagem"
-          class="materialize-textarea"> </textarea>
+        <textarea minlength="10" class="materialize-textarea validate" id="mensagem" required [(ngModel)]="contatoEmTela.mensagem" name="mensagem"> </textarea>
         <label for="mensagem">Mensagem *</label>
+        <span class="helper-text" data-error="Opa, algo errado. Está muito pequeno?" data-success=""></span>
       </div>
     </div>
 

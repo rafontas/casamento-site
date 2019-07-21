@@ -2,6 +2,7 @@ import { Component, AfterViewInit, OnInit } from '@angular/core';
 import { PageBase } from '../base/page-base';
 import { Carousel } from "materialize-css";
 import * as M from '../../assets/materializeCss/js/materialize.min.js'
+import { ColoreToolbarService } from '../colore-toolbar.service';
 
 @Component({
   selector: 'app-galeria',
@@ -19,6 +20,7 @@ export class GaleriaComponent {
   options = {};
 
   constructor() { 
+    ColoreToolbarService.coloreToolBar('fotos');
     this.qtdArrayFotos = Array.from(Array(this.quantFotos),(x,i)=>i);
   }
 

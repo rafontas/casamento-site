@@ -1,12 +1,12 @@
-.navbar-web {
-    background-color: rgba(13, 13, 13, .7) !important;
-}
-
-.navbar-web li:hover{
-    background-color: rgba(0, 150, 150, .7) !important;
-}
-
 nav ul a {
     font-family: 'Amatic SC', cursive;
     font-size: 1.5em;
 } 
+
+.navbar-web {
+    background-color: rgba(13, 13, 13, .7);
+}
+
+.navbar-web li:hover, .pag-ativa{
+    background-color: rgba(0, 150, 150, .7) !important;
+}

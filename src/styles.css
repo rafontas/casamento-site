@@ -1,3 +1,8 @@
+
+.active {
+    background-color: none;
+}
+
 .no-margin {
     padding: 0 0 0 0;
 }
@@ -70,29 +75,46 @@ img.bg {
         from {
             opacity: 0;
         }
-    }    
+    } 
 
-    input, textarea, .input-field label, .input-field .input {
+    .input-field input[type=text]:focus, 
+    .input-field input[type=number]:focus, 
+    .input-field input[type=text]:focus,
+    .input-field textarea:focus {
+        border-bottom: 1px solid #fff;
+        box-shadow: 0 1px 0 0 #fff;
         color: white;
     }
     
-    .input-field input[type=text]:focus, 
-    .input-field input[type=number]:focus, 
-    .input-field input[type=text]:focus, 
-    .input-field textarea:focus {
-        border-bottom: 1px solid #fff !important;
-        box-shadow: 0 1px 0 0 #fff !important;
-    }
+    /* .input-field span.helper-text:focus {
+        color: white;
+    } */
     
-    .input-field .prefix.active, 
-    .input-field input[type=text]:focus + label,
-    .input-field  textarea:focus + label,
-    .input-field input[type=number]:focus + label
+    input, textarea, 
+    .input-field label, 
+    .input-field span.helper-text,
+    .input-field .input,
+    .input-field .prefix.active
     {
-        color: #fff !important;
+        color: rgb(159,159,159);
     }
 
+    textarea.materialize-textarea{ 
+        height: 2rem; 
+    }
+
+    /* Valido */
+    .input-field .valid
+    {
+        /* border-bottom: 1px solid rgb(33, 150, 243) !important;
+        box-shadow: 0 1px 0 0 rgb(33, 150, 243)  !important; */
+        border-bottom: 1px solid rgb(42, 181, 168) !important;
+        box-shadow: 0 1px 0 0 rgb(42, 181, 168) !important;
+    }
     
-    .rota-clicada {
-        background-color: rgba(0, 150, 150, .7) !important;
+    /* Invalido */
+    .input-field .invalid 
+    {
+        border-bottom: 1px solid  rgb(239, 83, 80);
+        box-shadow: 0 1px 0 0  rgb(239, 83, 80);
     }

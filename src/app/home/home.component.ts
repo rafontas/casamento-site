@@ -1,4 +1,5 @@
 import { Component, AfterViewInit } from '@angular/core';
+import { ColoreToolbarService } from '../colore-toolbar.service';
 
 @Component({
   selector: 'app-home',
@@ -12,6 +13,7 @@ export class HomeComponent implements AfterViewInit {
   diasAteCasamento : number =  this.calcDiasAteCasamento ();
 
   constructor() { 
+    ColoreToolbarService.coloreToolBar('home');
     setInterval(() => {
       this.diasAteCasamento = this.calcDiasAteCasamento ()
     }, 1000);
@@ -20,7 +22,7 @@ export class HomeComponent implements AfterViewInit {
   calcDiasAteCasamento () : number {
 
     var date1 = new Date();
-    var date2 = new Date(2019, 8, 28, 16, 30);
+    var date2 = new Date(2019, 8, 28);
 
     var diff = date2.getTime() - date1.getTime();
 

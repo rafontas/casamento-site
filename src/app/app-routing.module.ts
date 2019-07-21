@@ -16,6 +16,7 @@ const routes: Routes = [
   { path: 'fotos', component: GaleriaComponent },
   { path: 'casamento', component: CasamentoComponent },
   { path: 'contato', component: ContatoComponent },
+  // { path: 'jogo', component: ContatoComponent },
   { path: '**',  component:  PagNaoEncontradaComponent }
 ];
 

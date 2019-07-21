@@ -1,34 +1,30 @@
-<!-- Side-Bar para Mobile -->
-<ul id="slide-out" class="side-nav">
-    <li>
-        <div class="user-view">
-            <div class="background blue">
-            </div>
-        </div>
-    </li>
-    <li id="home"><a (click)="clickToolbar($event)" routerLink="/home" title="">Bem Vindos</a></li>
-    <li id="presentes"><a (click)="clickToolbar($event)" routerLink="/presentes" title="">Lista de Presentes</a></li>
-    <li id="fotos"><a (click)="clickToolbar($event)" routerLink="/fotos" title="">Galeria</a></li>
-    <li id="casamento"><a (click)="clickToolbar($event)" routerLink="/casamento" title="">Casameto</a></li>
-    <li id="confirmar"><a (click)="clickToolbar($event)" routerLink="/confirmar" title="">Confirmação de Presença</a></li>
-    <li id="contato"><a (click)="clickToolbar($event)" routerLink="/contato" title="">Contato</a></li>
-</ul>
-
 <!-- Nav-bar para telas grandes. -->
 
 <div class="navbar-fixed">
-    <nav class="grey darken-4 navbar-web transparent">
-        <div class="container">
-            <div class="nav-wrapper center">
-                <ul id="nav-web" class="left hide-on-med-and-down">
+    <nav class="navbar-web">
+        <div class="container center">
+            <div class="nav-wrapper">
+                <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">Menu</i></a>
+                <ul id="nav-web" class="center hide-on-med-and-down">
                     <li id="home"><a (click)="clickToolbar($event)" routerLink="/home" title="">Bem Vindos</a></li>
                     <li id="presentes"><a (click)="clickToolbar($event)" routerLink="/presentes" title="">Lista de Presentes</a></li>
                     <li id="fotos"><a (click)="clickToolbar($event)" routerLink="/fotos" title="">Galeria</a></li>
                     <li id="casamento"><a (click)="clickToolbar($event)" routerLink="/casamento" title="">Casameto</a></li>
                     <li id="confirmar"><a (click)="clickToolbar($event)" routerLink="/confirmar" title="">Confirmação de Presença</a></li>
                     <li id="contato"><a (click)="clickToolbar($event)" routerLink="/contato" title="">Contato</a></li>
+                    <!-- <li id="jogo"><a (click)="clickToolbar($event)" routerLink="/jogo" title="">Jogo</a></li> -->
                 </ul>
             </div>
         </div>
     </nav>
+
+    <ul id="movile-nav" class="sidenav">
+        <li><a (click)="clickToolbar($event)" routerLink="/home" title="">Bem Vindos</a></li>
+        <li><a (click)="clickToolbar($event)" routerLink="/presentes" title="">Lista de Presentes</a></li>
+        <li><a (click)="clickToolbar($event)" routerLink="/fotos" title="">Galeria</a></li>
+        <li><a (click)="clickToolbar($event)" routerLink="/casamento" title="">Casameto</a></li>
+        <li><a (click)="clickToolbar($event)" routerLink="/confirmar" title="">Confirmação de Presença</a></li>
+        <li><a (click)="clickToolbar($event)" routerLink="/contato" title="">Contato</a></li>
+    </ul>
+        
 </div>

@@ -12,6 +12,10 @@ export class CasamentoComponent implements OnInit {
     ColoreToolbarService.coloreToolBar('casamento');
   }
 
+  mostraImagemFundo()  {
+    ColoreToolbarService.mostraImagemFundo();
+  }
+
   ngOnInit() {
   }
 

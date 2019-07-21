@@ -3,13 +3,14 @@ import { ConfirmaPresenca } from './confirma-presenca';
 import { ConfirmaPresencaService } from './confirma-presenca-service';
 import { stringify } from '@angular/compiler/src/util';
 import { ColoreToolbarService } from '../colore-toolbar.service';
+import { finalize } from 'rxjs/operators';
 
 @Component({
   selector: 'app-confirma-presenca',
   templateUrl: './confirma-presenca.component.html',
   styleUrls: ['./confirma-presenca.component.css']
 })
-export class ConfirmaPresencaComponent implements OnInit {
+export class ConfirmaPresencaComponent {
 
   confirmaPresenca: ConfirmaPresenca = new ConfirmaPresenca();
 
@@ -17,7 +18,8 @@ export class ConfirmaPresencaComponent implements OnInit {
     ColoreToolbarService.coloreToolBar('confirmar');
   }
 
-  ngOnInit() {
+  mostraImagemFundo()  {
+    ColoreToolbarService.mostraImagemFundo();
   }
 
   isNullOrEmpty(str: string): boolean {
@@ -85,23 +87,27 @@ export class ConfirmaPresencaComponent implements OnInit {
       return;
     }
 
+    ColoreToolbarService.iniciaLoading();
+
     this.confirmaPresencaService.saveData(this.confirmaPresenca)
-      .subscribe(res => {
+    .pipe(finalize(() => ColoreToolbarService.finalizaLoading()))
+    .subscribe(res => {
+      new M.Toast({
+        html: "Te esperamos lá!",
+        displayLength: 5000
+      });
+      
+      this.confirmaPresenca = new ConfirmaPresenca();
+    },
+      error => {
+        console.log(error);
         new M.Toast({
-          html: "Te esperamos lá!",
+          html: "Opa, algo deu errado.",
           displayLength: 5000
         });
-      },
-        error => {
-          console.log(error);
-          new M.Toast({
-            html: "Opa, algo deu errado.",
-            displayLength: 5000
-          });
-        }
-      );
+      }
+    );
 
-    this.confirmaPresenca = new ConfirmaPresenca();
   }
 
 }

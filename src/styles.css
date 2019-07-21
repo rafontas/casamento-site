@@ -20,6 +20,11 @@
     .no-padding-bottom { padding-bottom: 0 !important; }
     .no-padding-right  { padding-right: 0 !important; }
     .no-padding-left   { padding-left: 0 !important; }
+    
+.ver-fundo {
+    cursor: pointer;
+    color: rgb(13,13,13, 0.7);
+}
 
 img.bg {
     /* Set rules to fill background */

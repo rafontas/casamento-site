@@ -10,3 +10,7 @@ nav ul a {
 .navbar-web li:hover, .pag-ativa{
     background-color: rgba(0, 150, 150, .7) !important;
 }
+
+.progress {
+    visibility: hidden;
+}

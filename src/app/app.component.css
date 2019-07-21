@@ -21,3 +21,6 @@
     .no-margin-right { margin-right: 0 !important; }
     .no-margin-left { margin-left: 0 !important; }
 
+.ver-background {
+    opacity: 0.1 !important;
+}

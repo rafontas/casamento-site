@@ -6,9 +6,7 @@ import { ColoreToolbarService } from '../colore-toolbar.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements AfterViewInit {
-  ngAfterViewInit(): void {
-  }
+export class HomeComponent {
 
   diasAteCasamento : number =  this.calcDiasAteCasamento ();
 
@@ -17,6 +15,10 @@ export class HomeComponent implements AfterViewInit {
     setInterval(() => {
       this.diasAteCasamento = this.calcDiasAteCasamento ()
     }, 1000);
+  }
+
+  mostraImagemFundo()  {
+    ColoreToolbarService.mostraImagemFundo();
   }
 
   calcDiasAteCasamento () : number {

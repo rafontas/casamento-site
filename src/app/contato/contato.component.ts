@@ -2,13 +2,15 @@ import { Component, OnInit, NgModule } from '@angular/core';
 import { Contato } from './contato';
 import { ContatoService } from './contato.service';
 import { ColoreToolbarService } from '../colore-toolbar.service';
+import { ToolBarService } from '../tool-bar/tool-bar.service';
+import { finalize } from 'rxjs/operators';
 
 @Component({
   selector: 'app-contato',
   templateUrl: './contato.component.html',
   styleUrls: ['./contato.component.css']
 })
-export class ContatoComponent implements OnInit {
+export class ContatoComponent {
 
   contatoEmTela : Contato = new Contato();
 
@@ -16,7 +18,8 @@ export class ContatoComponent implements OnInit {
     ColoreToolbarService.coloreToolBar('contato');
   }
 
-  ngOnInit() {
+  mostraImagemFundo()  {
+    ColoreToolbarService.mostraImagemFundo();
   }
 
   
@@ -77,6 +80,14 @@ export class ContatoComponent implements OnInit {
 
   clickEnviaContato() {
 
+    // new M.Toast({
+    //   html: "Opa, falta algo.",
+    //   displayLength: 5000,
+    //   classes: "blue"
+    // });
+
+    ColoreToolbarService.iniciaLoading();
+    
     if (!this.validaTela()) {
       new M.Toast({
         html: "Opa, falta algo.",
@@ -86,23 +97,25 @@ export class ContatoComponent implements OnInit {
 
       return;
     }
+    
+    ColoreToolbarService.iniciaLoading();
 
     this.contatoService.saveData(this.contatoEmTela)
-      .subscribe( res => {
+    .pipe(finalize(() => ColoreToolbarService.finalizaLoading()))
+    .subscribe( res => {
           new M.Toast({
             html: "Obrigado pelo contato!",
             displayLength: 5000
           });
+          this.contatoEmTela = new Contato();
         },
         error => {
           console.log(error);
           new M.Toast({
             html: "Opa, algo deu errado.",
             displayLength: 5000
-          });        
+        });
       });
-
-      this.contatoEmTela = new Contato();
   }
 
 }

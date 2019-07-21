@@ -1,4 +1,5 @@
 <div class="bg-image"></div>
+<div class="ver-fundo right" (click)="mostraImagemFundo()"> <i class="material-icons"> photo </i> </div>
 <div class="shadow-form"> </div>
 
 <div class="aparece">
@@ -14,7 +15,7 @@
     <!-- Nome do Convidado -->
     <div class="row">
       <div class="input-field col s12 offset-m3 m6">
-        <input class="validate" [(ngModel)]="confirmaPresenca.nome" required id="nome-convidado" type="text" name="nome-convidado">
+        <input class="validate" [(ngModel)]="confirmaPresenca.nome" id="nome-convidado" type="text" name="nome-convidado">
         <span class="helper-text" data-error="Preencha nome e sobrenome, por favor." data-success=""></span>
         <label for="nome-convidado">Nome e Sobrenome *</label>
       </div>
@@ -23,7 +24,7 @@
     <!-- Quantidade de Adultos -->
     <div class="row">
       <div class="input-field col s12 offset-m3 m6">
-        <input class="validate" [(ngModel)]="confirmaPresenca.quantidadeAdultos" min="0" required id="qtd-adultos" type="number" name="qtd-adultos">
+        <input class="validate" [(ngModel)]="confirmaPresenca.quantidadeAdultos" min="0" id="qtd-adultos" type="number" name="qtd-adultos">
         <span class="helper-text" data-error="Opa, preencha pra gente! ;)" data-success=""></span>        
         <label for="qtd-adultos">Quantidade de Adultos *</label>
       </div>
@@ -32,7 +33,7 @@
     <!-- Quantidade de crianças -->
     <div class="row">
       <div class="input-field col s12 offset-m3 m6">
-        <input class="validate" [(ngModel)]="confirmaPresenca.quantidadeCrianca"  min="0" required id="qtd-criancas" type="number" name="qtd-criancas">
+        <input class="validate" [(ngModel)]="confirmaPresenca.quantidadeCrianca"  min="0" id="qtd-criancas" type="number" name="qtd-criancas">
         <span class="helper-text" data-error="Crianças com 7 anos ou menos. Opa, preencha pra gente! ;)" data-success="">Crianças com 7 anos ou menos.</span>        
         <label for="qtd-criancas">Quantidade de Crianças *</label>
       </div>

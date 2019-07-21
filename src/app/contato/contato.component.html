@@ -1,4 +1,5 @@
 <div class="bg-image"></div>
+<div class="ver-fundo right" (click)="mostraImagemFundo()"> <i class="material-icons"> photo </i> </div>
 <div class="shadow-form"></div>
 
 <div class="aparece">
@@ -12,7 +13,7 @@
     <!-- Nome do Convidado -->
     <div class="row">
       <div class="input-field col s12 offset-m3 m6">
-        <input class="validate" id="nome-convidado" required [(ngModel)]="contatoEmTela.nome" type="text" name="nome-convidado">
+        <input class="validate" id="nome-convidado" [(ngModel)]="contatoEmTela.nome" type="text" name="nome-convidado">
         <label for="nome-convidado">Nome e Sobrenome *</label>
         <span class="helper-text" data-error="Preencha nome e sobrenome, por favor." data-success=""></span>
       </div>
@@ -21,7 +22,7 @@
     <!-- Email Convidado -->
     <div class="row">
       <div class="input-field col s12 offset-m3 m6">
-        <input class="validate" id="email-convidado" required [(ngModel)]="contatoEmTela.email" type="email" name="email-convidado">
+        <input class="validate" id="email-convidado" [(ngModel)]="contatoEmTela.email" type="email" name="email-convidado">
         <label for="email-convidado">Email *</label>
         <span class="helper-text" data-error="Opa, algo errado, tem '@'?." data-success=""></span>
       </div>
@@ -38,7 +39,7 @@
     <!-- Mensagem -->
     <div class="row">
       <div class="input-field col s12 offset-m3 m6">
-        <textarea minlength="10" class="materialize-textarea validate" id="mensagem" required [(ngModel)]="contatoEmTela.mensagem" name="mensagem"> </textarea>
+        <textarea minlength="10" class="materialize-textarea validate" id="mensagem" [(ngModel)]="contatoEmTela.mensagem" name="mensagem"> </textarea>
         <label for="mensagem">Mensagem *</label>
         <span class="helper-text" data-error="Opa, algo errado. Está muito pequeno?" data-success=""></span>
       </div>

@@ -11,6 +11,10 @@ export class PresentesComponent implements OnInit {
   constructor() { 
     ColoreToolbarService.coloreToolBar('presentes');
   }
+  
+  mostraImagemFundo()  {
+    ColoreToolbarService.mostraImagemFundo();
+  }
 
   ngOnInit() {
   }

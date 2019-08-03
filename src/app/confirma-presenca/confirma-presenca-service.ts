@@ -24,6 +24,7 @@ export class ConfirmaPresencaService {
                 headers: new HttpHeaders().set('Content-Type', 'application/json') 
         };
 
+        // return this.http.post(this.Url, JSON.stringify(confirmaPresenca), options)
         return this.http.post(this.UrlPrd, JSON.stringify(confirmaPresenca), options)
             .pipe(
                 map ((res: any) => {

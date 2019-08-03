@@ -53,7 +53,7 @@ export class ConfirmaPresencaComponent {
       valido = false;
     }
 
-    if (this.confirmaPresenca.quantidadeCrianca > 0) {
+    if (this.confirmaPresenca.quantidadeCrianca >= 0) {
       $('#qtd-criancas').addClass('valid');
     }
     else {

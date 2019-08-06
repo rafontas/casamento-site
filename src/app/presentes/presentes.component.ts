@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ColoreToolbarService } from '../colore-toolbar.service';
 
 @Component({
   selector: 'app-presentes',
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PresentesComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+    ColoreToolbarService.coloreToolBar('presentes');
+  }
+  
+  mostraImagemFundo()  {
+    ColoreToolbarService.mostraImagemFundo();
+  }
 
   ngOnInit() {
   }

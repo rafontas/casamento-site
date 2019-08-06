@@ -1,11 +1,70 @@
+nav ul a {
+    font-family: 'Amatic SC', cursive;
+    font-size: 1.5em;
+} 
+
 .navbar-web {
-    background-color: rgba(13, 13, 13, .7) !important;
+    background-color: rgba(13, 13, 13, .7);
 }
 
-.navbar-web li:hover{
+.navbar-web li:hover, .pag-ativa{
     background-color: rgba(0, 150, 150, .7) !important;
 }
 
-.rota-clicada {
-    background-color: rgba(0, 150, 150, .7) !important;
+.progress {
+    visibility: hidden;
 }
+
+.menu-cell-abrir {
+    color: white;
+}
+
+@media not all and (min-width: 600px) {
+    .nav-bar-web-minha {
+        display: none;
+    }
+}
+
+@media not all and (max-width: 600px) {
+    .menu-cell-abrir {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    #mobile-nav {
+        background: #f0f0f0;
+        padding: 1em;
+        margin: 0;
+  
+        height: 100%;
+        width: 90%;
+        max-width: 320px;
+  
+        position: fixed;
+        top: 0;
+        left: -90%;
+  
+        transition: left 0.3s ease-out;        
+    }
+    
+    .menu-cell-ativo #mobile-nav {
+        left: 0 !important;
+        z-index: 10;
+    }
+
+        .menu-cell-ativo:after {
+            content: "";
+            display: block;
+    
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+    
+            background: rgba(0,0,0,0.4);
+        }
+}
+
+

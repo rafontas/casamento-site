@@ -1,16 +1,60 @@
+.bg-image {
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    z-index: -1;
+    
+    /* Local da imagem */
+    background-image: url("../images/fundo/casamento.jpg");
+
+    /* Centraliza o Background */
+    background-position: center center;
+
+    /* Sem repetição */
+    background-repeat: no-repeat;
+    
+    /* Fixa a imagem pra não mover se a altura da tela for maio que a imagem */
+    background-attachment: fixed;
+
+    /* Redimensiona a imagem de acordo com a tela */
+    background-size: cover;
+
+    /* Cor de fundo ao carregar */
+    background-color:  gainsboro;
+}
+
+.centro {
+    align-content: center !important;
+    box-align:center !important;
+    text-align: center !important;
+}
+
+.posicao {
+    text-align: center !important;
+}
+
+.titulo {
+    color: white;
+    text-shadow: 3px 3px 3px black;
+    font-family: 'Cabin Sketch', cursive;    
+    font-size: 350%;
+    z-index: 1;
+    letter-spacing: 10px !important;
+}
+
+.convite-individual {
+    margin-top: 10em;
+    color: white;
+    font-size: 140%;
+    font-family: 'Amatic SC', cursive;
+}
 
 .font-casamentos {
-    font-family: 'Dancing Script', cursive;
-}
-
-.font-size-3 {
-    font-size: 3em;
-}
-
-.font-size-5 {
-    font-size: 5em;
-}
-
-.font-size-4 {
-    font-size: 4em;
+    color: white;
+    text-shadow: 3px 3px 3px black;
+    font-family: 'Amatic SC', cursive;
+    font-size: 250%;
 }

@@ -1,43 +1,55 @@
-<div class="container">
-  <img class="bg" src="../src/app/images/fundo/Contato.jpg" alt="Imagen de Fundo">
+<div class="bg-image"></div>
+<div class="ver-fundo right" (click)="mostraImagemFundo()"> <i class="material-icons"> photo </i> </div>
+<div class="shadow-form"></div>
 
-  <div class="col m12">
-    <br>
-    <br>
-  </div>
-  <!-- Nome do Convidado -->
-  <div class="row">
-    <div class="input-field col s12 offset-m3 m6">
-      <input id="nome-convidado" type="text" name="nome-convidado">
-      <label for="nome-convidado">Nome</label>
-    </div>
-  </div>
-  <!-- Email Convidado -->
-  <div class="row">
-    <div class="input-field col s12 offset-m3 m6">
-      <input id="email-convidado" type="text" name="email-convidado">
-      <label for="email-convidado">Email</label>
-    </div>
-  </div>
-  <!-- Assunto -->
-  <div class="row">
-    <div class="input-field col s12 offset-m3 m6">
-      <input id="assunto" type="text" name="assunto">
-      <label for="assunto">Assunto</label>
-    </div>
-  </div>
-  <!-- Mensagem -->
-  <div class="row">
-    <div class="input-field col s12 offset-m3 m6">
-      <textarea id="mensagem" name="mensagem" class="materialize-textarea"> </textarea>
-      <label for="mensagem">Mensagem</label>
-    </div>
-  </div>
+<div class="aparece">
 
-  <div class="row">
-    <div class="input-field col s12 offset-m3 m6">
-      <div class="right">
-        <a class="waves-effect waves-light btn">Enviar</a>
+  <h2 class="center titulo-contato">• CONTATO •</h2>
+  <div class="contato-resposta center">Deixe sua mensagem. Responderemos em breve</div>
+  
+  <div class="container contato-form">
+    <div class="campos-obrigatorio">* Campos obrigatórios</div>    
+    
+    <!-- Nome do Convidado -->
+    <div class="row">
+      <div class="input-field col s12 offset-m3 m6">
+        <input class="validate" id="nome-convidado" [(ngModel)]="contatoEmTela.nome" type="text" name="nome-convidado">
+        <label for="nome-convidado">Nome e Sobrenome *</label>
+        <span class="helper-text" data-error="Preencha nome e sobrenome, por favor." data-success=""></span>
+      </div>
+    </div>
+
+    <!-- Email Convidado -->
+    <div class="row">
+      <div class="input-field col s12 offset-m3 m6">
+        <input class="validate" id="email-convidado" [(ngModel)]="contatoEmTela.email" type="email" name="email-convidado">
+        <label for="email-convidado">Email *</label>
+        <span class="helper-text" data-error="Opa, algo errado, tem '@'?." data-success=""></span>
+      </div>
+    </div>
+    
+    <!-- Assunto -->
+    <div class="row">
+      <div class="input-field col s12 offset-m3 m6">
+        <input id="assunto" [(ngModel)]="contatoEmTela.assunto" type="text" name="assunto">
+        <label for="assunto">Assunto</label>
+      </div>
+    </div>
+    
+    <!-- Mensagem -->
+    <div class="row">
+      <div class="input-field col s12 offset-m3 m6">
+        <textarea minlength="10" class="materialize-textarea validate" id="mensagem" [(ngModel)]="contatoEmTela.mensagem" name="mensagem"> </textarea>
+        <label for="mensagem">Mensagem *</label>
+        <span class="helper-text" data-error="Opa, algo errado. Está muito pequeno?" data-success=""></span>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s12 offset-m3 m6">
+        <div class="right">
+          <a class="waves-effect waves-light btn" (click)="clickEnviaContato()">Enviar</a>
+        </div>
       </div>
     </div>
   </div>

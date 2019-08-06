@@ -2,30 +2,31 @@ import { Component, AfterViewInit, OnInit } from '@angular/core';
 import { PageBase } from '../base/page-base';
 import { Carousel } from "materialize-css";
 import * as M from '../../assets/materializeCss/js/materialize.min.js'
+import { ColoreToolbarService } from '../colore-toolbar.service';
 
 @Component({
   selector: 'app-galeria',
   templateUrl: './galeria.component.html',
   styleUrls: ['./galeria.component.css']
 })
-export class GaleriaComponent implements AfterViewInit {
+export class GaleriaComponent {
   
+  pathFotosPequenas : string = "../src/app/images/galeria/pequenas/";
+  pathFotosGrandes : string = "../src/app/images/galeria/normal/";
+  quantFotos : number = 42;
+  fotoAtual : number = 0;
+  qtdArrayFotos : number [];
+
   options = {};
 
   constructor() { 
-    console.log("Galeria construtor.");
-    // super(document);
-    // var carousel = document.querySelector('.carousel');
-    // var instance = M.Carousel.init(carousel);
-    // console.log("Obj: " || JSON.stringify(instance));
-    console.log('Porra!');
+    ColoreToolbarService.coloreToolBar('fotos');
+    this.qtdArrayFotos = Array.from(Array(this.quantFotos),(x,i)=>i);
   }
 
-  ngAfterViewInit (){
-    // $(document)s
-    // console.log('Porra');
-    // var element = document.querySelector('.carousel');
-    // var instance = M.carousel.init(element, this.options);
+  somaUm(){
+    return this.fotoAtual++;
   }
 
 }
+

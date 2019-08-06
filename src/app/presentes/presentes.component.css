@@ -1,17 +1,30 @@
-img.bg {
-    /* Set rules to fill background */
-    min-height: 100%;
-      
-    /* Set up proportionate scaling */
-    width: 100%;
-    height: auto;
-      
-    /* Set up positioning */
+.bg-image {
+
     position: fixed;
-    top: 0;
     left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
     z-index: -1;
-  }
+    
+    /* Local da imagem */
+    background-image: url("../images/fundo/presentes.jpg");
+
+    /* Centraliza o Background */
+    background-position: center center;
+
+    /* Sem repetição */
+    background-repeat: no-repeat;
+    
+    /* Fixa a imagem pra não mover se a altura da tela for maio que a imagem */
+    background-attachment: fixed;
+
+    /* Redimensiona a imagem de acordo com a tela */
+    background-size: cover;
+
+    /* Cor de fundo ao carregar */
+    background-color:  gainsboro;
+}
   
   @media screen and (max-width: 1024px) { /* Specific to this particular image */
       img.bg {
@@ -21,6 +34,11 @@ img.bg {
           margin-left: -512px;
       }
     }
+
+.iframe-presentes{
+    width: 100%;
+    height: 800px;
+}
 
 .icon-presentes {
     font-size: 10em;

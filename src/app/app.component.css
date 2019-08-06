@@ -1,13 +1,17 @@
-body {
+ body {
     display: flex;
-    min-height: 100vh;
     flex-direction: column;
-}
+    min-height: 100vh;
+} 
 
     main {
         flex: 1 0 auto;
+        position: relative;
     }
 
+.no-padding {
+    padding: 0 0 0 0;
+}
     
 .no-margin {
     margin: 0 0 0 0;
@@ -16,3 +20,7 @@ body {
     .no-margin-bottom { margin-bottom: 0 !important; }
     .no-margin-right { margin-right: 0 !important; }
     .no-margin-left { margin-left: 0 !important; }
+
+.ver-background {
+    opacity: 0.1 !important;
+}

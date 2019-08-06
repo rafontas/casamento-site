@@ -1,3 +1,8 @@
+
+.active {
+    background-color: none;
+}
+
 .no-margin {
     padding: 0 0 0 0;
 }
@@ -15,6 +20,11 @@
     .no-padding-bottom { padding-bottom: 0 !important; }
     .no-padding-right  { padding-right: 0 !important; }
     .no-padding-left   { padding-left: 0 !important; }
+    
+.ver-fundo {
+    cursor: pointer;
+    color: rgb(13,13,13, 0.7);
+}
 
 img.bg {
     /* Set rules to fill background */
@@ -34,4 +44,82 @@ img.bg {
     .font-presentes {
         font-family: 'Dancing Script', cursive;
         font-size: 3em;
+    }
+
+    .shadow-form {
+        background-color: rgba(75, 75, 75, .8) !important;
+        position: absolute;
+        left: 20%;
+        width: 60%;
+        height: 100%;
+        z-index: -1;
+        -webkit-animation: aparece-shadow-form 2s;
+        animation: aparece-shadow-form 2s;
+        -webkit-animation-delay: .5s;
+        animation-delay: .5s;
+        -webkit-animation-fill-mode: backwards;
+        animation-fill-mode: backwards;        
+    }  
+
+    .aparece {
+        -webkit-animation: aparece-shadow-form 2s;
+        animation: aparece-shadow-form 2s;        
+        -webkit-animation-delay: .5s;
+        animation-delay: .5s;
+        -webkit-animation-fill-mode: backwards;
+        animation-fill-mode: backwards;
+    }
+
+    @-webkit-keyframes aparece-shadow-form {
+        from {
+            opacity: 0;
+        }
+    }    
+    
+    @keyframes aparece-shadow-form {
+        from {
+            opacity: 0;
+        }
+    } 
+
+    .input-field input[type=text]:focus, 
+    .input-field input[type=number]:focus, 
+    .input-field input[type=text]:focus,
+    .input-field textarea:focus {
+        border-bottom: 1px solid #fff;
+        box-shadow: 0 1px 0 0 #fff;
+        color: white;
+    }
+    
+    /* .input-field span.helper-text:focus {
+        color: white;
+    } */
+    
+    input, textarea, 
+    .input-field label, 
+    .input-field span.helper-text,
+    .input-field .input,
+    .input-field .prefix.active
+    {
+        color: rgb(159,159,159);
+    }
+
+    textarea.materialize-textarea{ 
+        height: 2rem; 
+    }
+
+    /* Valido */
+    .input-field .valid
+    {
+        /* border-bottom: 1px solid rgb(33, 150, 243) !important;
+        box-shadow: 0 1px 0 0 rgb(33, 150, 243)  !important; */
+        border-bottom: 1px solid rgb(42, 181, 168) !important;
+        box-shadow: 0 1px 0 0 rgb(42, 181, 168) !important;
+    }
+    
+    /* Invalido */
+    .input-field .invalid 
+    {
+        border-bottom: 1px solid  rgb(239, 83, 80);
+        box-shadow: 0 1px 0 0  rgb(239, 83, 80);
     }

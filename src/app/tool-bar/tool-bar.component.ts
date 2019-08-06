@@ -22,6 +22,7 @@ export class ToolBarComponent implements OnInit, AfterViewInit {
     this.coloreItemEscolhido(itemClicado.id);
   }
   
+<<<<<<< HEAD
   public clickSideNav (event) {
     if (this.sideNavAtiva) {
       console.log('Menu desativado');
@@ -35,6 +36,8 @@ export class ToolBarComponent implements OnInit, AfterViewInit {
     this.sideNavAtiva = !this.sideNavAtiva;
   }
 
+=======
+>>>>>>> 5d88790e2089397e6da37b87b0c87654cc2bda2b
   public coloreItemEscolhido (item : string) 
   {
     item = item.replace ('/', '');

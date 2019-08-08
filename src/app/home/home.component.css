@@ -26,43 +26,6 @@
     background-color:  gainsboro;
 }
 
-.texto-home {
-    color: white;
-    text-shadow: 3px 3px 3px black;
-    font-size: 700%;
-    font-family: 'Dancing Script', cursive;
-    top: 15%;
-}
-
-@media (min-width: 500px) {
-    .texto-home {
-        /* position: fixed; */
-        text-align: center;
-        top: 15%;
-        font-size: 500%;
-    }
-}
-
-@media (min-width: 600px) {
-    .texto-home {
-        text-align: center;
-        font-size: 600%;
-    }
-}
-
-@media (min-width: 700px) {
-    .texto-home {
-        text-align: center;
-        font-size: 650%;
-    }
-} 
-
-@media (min-width: 800px) {
-    .texto-home {
-        font-size: 700%;
-    }
-}
-
 
 .centered {
     position: absolute;
@@ -71,14 +34,71 @@
     transform: translate(-50%, -50%);    
 }
 
+.texto-home {
+    color: white;
+    text-shadow: 3px 3px 3px black;
+    font-size: 325%;
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    top: 15%;
+}
+
 .txt-faltam-dias {
     position: absolute;
-    bottom: 15%;
+    bottom: 5%;
     left: 50%;
     color: white;
     font-size: 3em;
     text-shadow: 3px 3px 3px black;
     font-family: 'Dancing Script', cursive;
     transform: translate(-50%, -50%);    
+    font-size: 200%;
 }
+
+
+@media (min-width: 370) {
+    .texto-home {
+        font-size: 375%;
+    }
+    .txt-faltam-dias {
+        font-size: 225%;
+    }
+}
+
+@media (min-width: 500px) {
+    .texto-home {
+        font-size: 500%;
+    }
+    .txt-faltam-dias {
+        font-size: 235%;
+    }
+}
+
+@media (min-width: 600px) {
+    .texto-home {
+        font-size: 600%;
+    }
+    .txt-faltam-dias {
+        font-size: 275%;
+    }    
+}
+
+@media (min-width: 700px) {
+    .texto-home {
+        font-size: 650%;
+    }
+    .txt-faltam-dias {
+        font-size: 300%;
+    }    
+} 
+
+@media (min-width: 800px) {
+    .texto-home {
+        font-size: 700%;
+    }
+    .txt-faltam-dias {
+        font-size: 350%;
+    }       
+}
+
 

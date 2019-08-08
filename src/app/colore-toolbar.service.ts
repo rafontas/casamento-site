@@ -10,8 +10,8 @@ export class ColoreToolbarService {
   constructor() { }
 
   static coloreToolBar (itemChamou : string) {
-    $('#nav-web li').removeClass('pag-ativa');
-    $('#' + itemChamou).addClass('pag-ativa');
+    $('.controla-menu li').removeClass('pag-ativa');
+    $('.' + itemChamou).addClass('pag-ativa');
     ColoreToolbarService.vendoBackground = false;
     ColoreToolbarService.mostraImagemFundo();
   }

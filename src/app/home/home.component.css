@@ -25,14 +25,44 @@
     /* Cor de fundo ao carregar */
     background-color:  gainsboro;
 }
- 
+
 .texto-home {
     color: white;
     text-shadow: 3px 3px 3px black;
-    font-size: 7em;
+    font-size: 700%;
     font-family: 'Dancing Script', cursive;
-    top: 10%;
+    top: 15%;
 }
+
+@media (min-width: 500px) {
+    .texto-home {
+        /* position: fixed; */
+        text-align: center;
+        top: 15%;
+        font-size: 500%;
+    }
+}
+
+@media (min-width: 600px) {
+    .texto-home {
+        text-align: center;
+        font-size: 600%;
+    }
+}
+
+@media (min-width: 700px) {
+    .texto-home {
+        text-align: center;
+        font-size: 650%;
+    }
+} 
+
+@media (min-width: 800px) {
+    .texto-home {
+        font-size: 700%;
+    }
+}
+
 
 .centered {
     position: absolute;

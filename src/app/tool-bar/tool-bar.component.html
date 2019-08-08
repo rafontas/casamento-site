@@ -1,36 +1,39 @@
-<!-- Nav-bar para telas grandes. -->
-
-<div class="navbar-fixed">
-    <nav class="navbar-web">
-        <div class="menu-cell-abrir left" (click)="clickSideNav($event)"><i class="material-icons">menu</i></div>
-        <div class="container center nav-bar-web-minha">
-            <div class="nav-wrapper">
-                <ul id="nav-web" class="center">
-                    <li id="home"><a (click)="clickToolbar($event)" routerLink="/home" title="">Bem Vindos</a></li>
-                    <li id="presentes"><a (click)="clickToolbar($event)" routerLink="/presentes" title="">Lista de Presentes</a></li>
-                    <li id="fotos"><a (click)="clickToolbar($event)" routerLink="/fotos" title="">Galeria</a></li>
-                    <li id="casamento"><a (click)="clickToolbar($event)" routerLink="/casamento" title="">Casameto</a></li>
-                    <li id="confirmar"><a (click)="clickToolbar($event)" routerLink="/confirmar" title="">Confirmação de Presença</a></li>
-                    <li id="contato"><a (click)="clickToolbar($event)" routerLink="/contato" title="">Contato</a></li>
-                    <!-- <li id="jogo"><a (click)="clickToolbar($event)" routerLink="/jogo" title="">Jogo</a></li> -->
-                </ul>
+<!-- div para controlar se o menu lateral está ativo ou não -->
+<div class="controla-menu" (click)="fechaMenuCell($event.target)"> 
+    <div class="navbar-fixed">
+        <nav class="navbar-web">
+            <div class="menu-cell-abrir left" (click)="clickSideNav()">
+                <i class="material-icons">menu</i>
             </div>
-        </div>
-        <div class="progress"> <div class="indeterminate"></div></div>
-    </nav>
+            <div class="container center nav-bar-web-minha">
+                <div class="nav-wrapper">
+                    <ul id="nav-web" class="center">
+                        <li class="home"><a routerLink="/home" title="">Bem Vindos</a></li>
+                        <li class="presentes"><a routerLink="/presentes" title="">Lista de Presentes</a></li>
+                        <li class="fotos"><a routerLink="/fotos" title="">Galeria</a></li>
+                        <li class="casamento"><a routerLink="/casamento" title="">Casamento</a> </li>
+                        <li class="confirmar"><a routerLink="/confirmar" title="">Confirmação de Presença</a></li>
+                        <li class="contato"><a routerLink="/contato" title="">Contato</a></li>
+                        <!-- <li id="jogo"><a routerLink="/jogo" title="">Jogo</a></li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="progress">
+                <div class="indeterminate"></div>
+            </div>
+        </nav>
 
-    <div class="ver-fundo right" (click)="mostraImagemFundo()"> </div>
-    
-    <div id="mobile-nav" class="">
+        <div class="ver-fundo right" (click)="mostraImagemFundo()"> </div>
+    </div>
 
+    <div class="mobile-nav">
         <ul>
-            <li><a (click)="clickToolbar($event)" routerLink="/home" title="">Bem Vindos</a></li>
-            <li><a (click)="clickToolbar($event)" routerLink="/presentes" title="">Lista de Presentes</a></li>
-            <li><a (click)="clickToolbar($event)" routerLink="/fotos" title="">Galeria</a></li>
-            <li><a (click)="clickToolbar($event)" routerLink="/casamento" title="">Casameto</a></li>
-            <li><a (click)="clickToolbar($event)" routerLink="/confirmar" title="">Confirmação de Presença</a></li>
-            <li><a (click)="clickToolbar($event)" routerLink="/contato" title="">Contato</a></li>
+            <li class="home"><a class="link-menu" routerLink="/home" title="">Bem Vindos</a></li>
+            <li class="presentes"><a class="link-menu" routerLink="/presentes" title="">Lista de Presentes</a></li>
+            <li class="fotos"><a class="link-menu" routerLink="/fotos" title="">Galeria</a></li>
+            <li class="casamento"><a class="link-menu" routerLink="/casamento" title="">Casamento</a></li>
+            <li class="confirmar"><a class="link-menu" routerLink="/confirmar" title="">Confirmação de Presença</a></li>
+            <li class="contato"><a class="link-menu" routerLink="/contato" title="">Contato</a></li>
         </ul>
     </div>
-        
 </div>

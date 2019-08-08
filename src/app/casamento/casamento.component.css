@@ -40,9 +40,17 @@
     color: white;
     text-shadow: 3px 3px 3px black;
     font-family: 'Cabin Sketch', cursive;    
-    font-size: 350%;
     z-index: 1;
-    letter-spacing: 10px !important;
+    font-size: 250%;
+    letter-spacing: 5px !important;
+}
+
+
+.font-casamentos {
+    color: white;
+    text-shadow: 3px 3px 3px black;
+    font-family: 'Amatic SC', cursive;
+    font-size: 200%;
 }
 
 .convite-individual {
@@ -52,9 +60,53 @@
     font-family: 'Amatic SC', cursive;
 }
 
-.font-casamentos {
-    color: white;
-    text-shadow: 3px 3px 3px black;
-    font-family: 'Amatic SC', cursive;
-    font-size: 250%;
+
+.iframe-responsivo {
+    position: relative;
+    overflow: hidden;    
+    padding-top: 70%;
+    width: 600; 
+    height: 400;
 }
+
+#gmap_canvas {
+    padding-left: 20%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 0;    
+    width: 80%;
+    height: 80%;
+}
+
+@media (min-width: 500px) {
+    .titulo {
+        font-size: 275%;
+        letter-spacing: 7px !important;
+    }
+
+    .convite-individual {
+        font-size: 155%;
+    }    
+
+    .font-casamentos {
+        font-size: 225%;
+    }    
+}
+
+@media (min-width: 600px) {
+    .titulo {
+        font-size: 350%;
+        letter-spacing: 10px !important;
+    }
+
+    .convite-individual {
+        font-size: 170%;
+    }    
+
+    .font-casamentos {
+        font-size: 250%;
+    }        
+}
+
+

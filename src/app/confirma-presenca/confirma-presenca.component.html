@@ -14,7 +14,7 @@
 
     <!-- Nome do Convidado -->
     <div class="row">
-      <div class="input-field col s12 offset-m3 m6">
+      <div class="input-field col s12 offset-m3 m7">
         <input class="validate" [(ngModel)]="confirmaPresenca.nome" id="nome-convidado" type="text" name="nome-convidado">
         <span class="helper-text" data-error="Preencha nome e sobrenome, por favor." data-success=""></span>
         <label for="nome-convidado">Nome e Sobrenome *</label>
@@ -23,7 +23,7 @@
     
     <!-- Quantidade de Adultos -->
     <div class="row">
-      <div class="input-field col s12 offset-m3 m6">
+      <div class="input-field col s12 offset-m3 m7">
         <input class="validate" [(ngModel)]="confirmaPresenca.quantidadeAdultos" min="0" id="qtd-adultos" type="number" name="qtd-adultos">
         <span class="helper-text" data-error="Opa, preencha pra gente! ;)" data-success=""></span>        
         <label for="qtd-adultos">Quantidade de Adultos *</label>
@@ -32,7 +32,7 @@
     
     <!-- Quantidade de crianças -->
     <div class="row">
-      <div class="input-field col s12 offset-m3 m6">
+      <div class="input-field col s12 offset-m3 m7">
         <input class="validate" [(ngModel)]="confirmaPresenca.quantidadeCrianca"  min="-1" id="qtd-criancas" type="number" name="qtd-criancas">
         <span class="helper-text" data-error="Crianças com 7 anos ou menos. Opa, preencha pra gente! ;)" data-success="">Crianças com 7 anos ou menos.</span>        
         <label for="qtd-criancas">Quantidade de Crianças *</label>
@@ -41,7 +41,7 @@
 
     <!-- Confirmar Presença -->
     <div class="row">
-      <div class="input-field col s12 offset-m3 m6">
+      <div class="input-field col s12 offset-m3 m7">
         <div class="right">
           <a (click)="clickConfirmaPresenca()" class="waves-effect waves-light btn">Enviar</a>
         </div>

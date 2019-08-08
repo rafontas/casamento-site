@@ -60,6 +60,34 @@ img.bg {
         -webkit-animation-fill-mode: backwards;
         animation-fill-mode: backwards;        
     }  
+    
+    .campos-obrigatorio {
+        position: absolute;
+        color: rgb(159,159,159);
+        font-size: 80%;
+        bottom: 1%;
+        left: 21%;
+    }
+
+ 
+    @media (max-width: 850px) {
+        .shadow-form {
+            width: 100%;
+            left: 0;
+        }
+    }
+
+    
+    @media (max-width: 600px) {
+        .shadow-form {
+            width: 100%;
+            left: 0;
+        }
+
+        .campos-obrigatorio {
+            left: 4%;
+        }
+    }
 
     .aparece {
         -webkit-animation: aparece-shadow-form 2s;

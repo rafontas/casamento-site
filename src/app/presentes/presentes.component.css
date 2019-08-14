@@ -8,7 +8,7 @@
     z-index: -1;
     
     /* Local da imagem */
-    background-image: url("../images/fundo/presentes.jpg");
+    background-image: url("../images/fundo_p/presentes.jpg");
 
     /* Centraliza o Background */
     background-position: center center;
@@ -26,14 +26,17 @@
     background-color:  gainsboro;
 }
   
-  @media screen and (max-width: 1024px) { /* Specific to this particular image */
-      img.bg {
-          z-index: -1;
-          margin-top: 5%;
-          left: 50%;
-          margin-left: -512px;
-      }
+@media screen and  (min-width: 1280px) {
+    .bg-image {
+        background-image: url("../images/fundo_m/presentes.jpg");
     }
+}
+
+@media screen and (min-width: 1900px) {
+    .bg-image {
+        background-image: url("../images/fundo/presentes.jpg");
+    }
+}
 
 .iframe-presentes{
     width: 100%;

@@ -1,5 +1,5 @@
 .bg-image {
-
+    
     position: fixed;
     left: 0;
     top: 0;
@@ -8,7 +8,7 @@
     z-index: -1;
     
     /* Local da imagem */
-    background-image: url("../images/fundo/home.jpg");
+    background-image: url("../images/fundo_p/home.jpg");
 
     /* Centraliza o Background */
     background-position: center center;
@@ -26,6 +26,18 @@
     background-color:  gainsboro;
 }
 
+
+@media (min-width: 1280px) {
+    .bg-image {
+        background-image: url("../images/fundo_m/home.jpg");
+    }
+}
+
+@media (min-width: 1900px) {
+    .bg-image {
+        background-image: url("../images/fundo/home.jpg");
+    }
+}
 
 .centered {
     position: absolute;

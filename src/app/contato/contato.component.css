@@ -8,7 +8,7 @@
     z-index: -1;
     
     /* Local da imagem */
-    background-image: url("../images/fundo/Contato.jpg");
+    background-image: url("../images/fundo_p/Contato.jpg");
 
     /* Centraliza o Background */
     background-position: center center;
@@ -26,6 +26,17 @@
     background-color:  gainsboro;
 }
 
+@media screen and (min-width: 1280px) {
+    .bg-image {
+        background-image: url("../images/fundo_m/Contato.jpg");
+    }
+}
+
+@media screen and (min-width: 1900px) {
+    .bg-image {
+        background-image: url("../images/fundo/Contato.jpg");
+    }
+}
 
 .titulo-contato {
     font-size: 300%;

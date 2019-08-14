@@ -27,15 +27,7 @@ export class ConfirmaPresencaComponent {
   }
 
   hasTowStrings(str: string): boolean {
-    var valido = true;
-
-    valido = str.split(' ').length >= 2;
-
-    str.split(' ').forEach(element => {
-      valido = (valido ? element.length >= 3 : false);
-    });
-
-    return valido;
+    return str.split(' ').length >= 2;
   }
 
 
@@ -64,12 +56,10 @@ export class ConfirmaPresencaComponent {
     if (!this.isNullOrEmpty(this.confirmaPresenca.nome) &&
       this.hasTowStrings(this.confirmaPresenca.nome)) {
       $('#nome-convidado').addClass('valid');
-      console.log('Nome: inválido');
     }
     else {
       valido = false;
       $('#nome-convidado').addClass('invalid');
-      console.log('Nome: válido');
     }
 
     return valido;
@@ -83,28 +73,32 @@ export class ConfirmaPresencaComponent {
         displayLength: 5000,
         classes: "red lighten-1"
       });
-
+      
       return;
     }
-
+    
     ColoreToolbarService.iniciaLoading();
-
+    
     this.confirmaPresencaService.saveData(this.confirmaPresenca)
     .pipe(finalize(() => ColoreToolbarService.finalizaLoading()))
     .subscribe(res => {
       new M.Toast({
         html: "Te esperamos lá!",
-        displayLength: 5000
+        displayLength: 5000,
+        classes: "blue lighten-1"
       });
       
       this.confirmaPresenca = new ConfirmaPresenca();
+      ColoreToolbarService.finalizaLoading();      
     },
       error => {
         console.log(error);
         new M.Toast({
           html: "Opa, algo deu errado.",
-          displayLength: 5000
-        });
+          displayLength: 5000,
+          classes: "red lighten-1"
+      });
+        ColoreToolbarService.finalizaLoading();      
       }
     );
 

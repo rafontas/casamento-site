@@ -8,7 +8,8 @@
     z-index: -1;
     
     /* Local da imagem */
-    background-image: url("../images/fundo/casamento.jpg");
+    /* background-image: url("../images/fundo/casamento.jpg"); */
+    background-image: url("../images/fundo_p/casamento.jpg");
 
     /* Centraliza o Background */
     background-position: center center;
@@ -99,14 +100,24 @@
         font-size: 350%;
         letter-spacing: 10px !important;
     }
-
+    
     .convite-individual {
         font-size: 170%;
     }    
-
+    
     .font-casamentos {
         font-size: 250%;
     }        
 }
 
+@media (min-width: 1280px) {
+    .bg-image {
+        background-image: url("../images/fundo_m/casamento.jpg");
+    }
+}
 
+@media (min-width: 1900px) {
+    .bg-image {
+        background-image: url("../images/fundo/casamento.jpg");
+    }
+}

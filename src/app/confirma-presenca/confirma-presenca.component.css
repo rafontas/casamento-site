@@ -8,22 +8,35 @@
     z-index: -1;
     
     /* Local da imagem */
-    background-image: url("../images/fundo/ConfirmarPresenca.jpg");
-
+    background-image: url("../images/fundo_p/ConfirmarPresenca.jpg");
+    
     /* Centraliza o Background */
     background-position: center center;
-
+    
     /* Sem repetição */
     background-repeat: no-repeat;
     
     /* Fixa a imagem pra não mover se a altura da tela for maio que a imagem */
     background-attachment: fixed;
-
+    
     /* Redimensiona a imagem de acordo com a tela */
     background-size: cover;
-
+    
     /* Cor de fundo ao carregar */
     background-color:  gainsboro;
+}
+
+
+@media (min-width: 1280px) {
+    .bg-image {
+        background-image: url("../images/fundo_m/ConfirmarPresenca.jpg");
+    }
+}
+
+@media (min-width: 1900px) {
+    .bg-image {
+        background-image: url("../images/fundo/ConfirmarPresenca.jpg");
+    }
 }
 
 

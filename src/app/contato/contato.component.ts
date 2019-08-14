@@ -32,10 +32,6 @@ export class ContatoComponent {
 
     valido = str.split(' ').length >= 2;
 
-    str.split(' ').forEach(element => {
-      valido = (valido ? element.length >= 3 : false);
-    });
-
     return valido;
   }
 

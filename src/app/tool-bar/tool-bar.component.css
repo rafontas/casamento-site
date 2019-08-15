@@ -2,6 +2,32 @@ ul a {
     font-family: 'Amatic SC', cursive;
 } 
 
+.img-side-nav-container {
+    position: relative;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    height: 175px;
+    /* width: 150px; */
+}
+
+.img-side-nav {
+    position: absolute;
+
+    height: 100%;
+    width: 100%;
+
+    z-index: 2;
+    background-image: url("../images/fundo/side-nav.png");
+
+    /* Posiciona a imagem no centro */
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-clip: padding-box;
+
+    /* background-position: center center; */
+}
+
 /* Font do toolbar */
 nav ul a {
     font-size: 105%;

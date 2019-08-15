@@ -27,6 +27,18 @@
     background-color:  gainsboro;
 }
 
+@media (min-width: 1280px) {
+    .bg-image {
+        background-image: url("../images/fundo_m/casamento.jpg");
+    }
+}
+
+@media (min-width: 1900px) {
+    .bg-image {
+        background-image: url("../images/fundo/casamento.jpg");
+    }
+}
+
 .centro {
     align-content: center !important;
     box-align:center !important;
@@ -108,16 +120,4 @@
     .font-casamentos {
         font-size: 250%;
     }        
-}
-
-@media (min-width: 1280px) {
-    .bg-image {
-        background-image: url("../images/fundo_m/casamento.jpg");
-    }
-}
-
-@media (min-width: 1900px) {
-    .bg-image {
-        background-image: url("../images/fundo/casamento.jpg");
-    }
 }

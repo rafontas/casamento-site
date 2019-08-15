@@ -76,14 +76,6 @@ export class ContatoComponent {
 
   clickEnviaContato() {
 
-    // new M.Toast({
-    //   html: "Opa, falta algo.",
-    //   displayLength: 5000,
-    //   classes: "blue"
-    // });
-
-    ColoreToolbarService.iniciaLoading();
-    
     if (!this.validaTela()) {
       new M.Toast({
         html: "Opa, falta algo.",
@@ -101,7 +93,8 @@ export class ContatoComponent {
     .subscribe( res => {
           new M.Toast({
             html: "Obrigado pelo contato!",
-            displayLength: 5000
+            displayLength: 5000,
+            classes: "blue lighten-1",
           });
           this.contatoEmTela = new Contato();
         },
@@ -109,7 +102,8 @@ export class ContatoComponent {
           console.log(error);
           new M.Toast({
             html: "Opa, algo deu errado.",
-            displayLength: 5000
+            displayLength: 5000,
+            classes: "red lighten-1"
         });
       });
   }

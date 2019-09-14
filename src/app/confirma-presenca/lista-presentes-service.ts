@@ -28,12 +28,12 @@ export class Convidado {
     template () : string {
         var txtTemplate : string;
         
-        txtTemplate = '<tr>';
+        txtTemplate = '<tr style="color:white;">';
         txtTemplate += `<td>${this.nome}</td>`;
         txtTemplate += `<td>${this.datePipe.transform(this.data, "dd/MM/yyyy HH:mm")}</td>`;
         txtTemplate += `<td>${this.quantidadeAdultos}</td>`;
         txtTemplate += `<td>${this.quantidadeCrianca}</td>`;
-        txtTemplate += '</tr>';
+        txtTemplate += '</tr> </br >';
 
         return txtTemplate;
     }

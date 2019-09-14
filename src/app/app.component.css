@@ -24,3 +24,8 @@
 .ver-background {
     opacity: 0.1 !important;
 }
+
+.lista-presentes td {
+    font-family: 'Amatic SC', cursive;    
+    color: white;
+}

@@ -38,6 +38,22 @@
     }
 }
 
+.lista-presentes th {
+    /* font-family: 'Cabin Sketch', cursive;      */
+    font-family: 'Amatic SC', cursive;    
+    font-size: 150%;
+    color: white;
+}
+
+.lista-presentes td {
+    font-family: 'Amatic SC', cursive;    
+    color: white;
+}
+
+table._striped > tbody > tr:nth-child(2n+1) {
+    background-color: rgba(242, 242, 242, 0.7);
+}
+
 .lista-presentes {
     padding: 1% 1% 1% 1%;
 }

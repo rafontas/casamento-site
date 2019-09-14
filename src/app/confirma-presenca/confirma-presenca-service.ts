@@ -18,7 +18,7 @@ export class ConfirmaPresencaService {
     constructor(private http: HttpClient) {
     }
 
-    saveData(confirmaPresenca : ConfirmaPresenca) : Observable<RespostaRequisicao>{
+    saveData(confirmaPresenca : ConfirmaPresenca) : Observable<RespostaRequisicao> {
 
         var options = { 
                 headers: new HttpHeaders().set('Content-Type', 'application/json') 
@@ -33,6 +33,7 @@ export class ConfirmaPresencaService {
                     var respostaReq = new RespostaRequisicao();
                     respostaReq.status = res.status;
                     respostaReq.mensagem = res.mensagem;
+                    respostaReq.situacao = res.situacao;
 
                     return respostaReq;
                 }

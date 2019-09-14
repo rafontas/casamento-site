@@ -16,7 +16,9 @@ import { FooterCompComponent } from './footer-comp/footer-comp.component';
 import { ConfirmaPresencaService } from './confirma-presenca/confirma-presenca-service';
 import { ContatoService } from './contato/contato.service';
 import { ColoreToolbarService } from './colore-toolbar.service';
-
+import { DatePipe } from '@angular/common';
+import { registerLocaleData } from '@angular/common';
+import localeBr from '@angular/common/locales/pt-PT';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,8 @@ import { ColoreToolbarService } from './colore-toolbar.service';
   providers: [
     ConfirmaPresencaService,
     ContatoService,
-    ColoreToolbarService
+    ColoreToolbarService,
+    DatePipe
   ],
   bootstrap: [AppComponent]
 })

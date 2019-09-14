@@ -26,7 +26,6 @@
     background-color:  gainsboro;
 }
 
-
 @media (min-width: 1280px) {
     .bg-image {
         background-image: url("../images/fundo_m/ConfirmarPresenca.jpg");
@@ -39,6 +38,15 @@
     }
 }
 
+.lista-presentes {
+    padding: 1% 1% 1% 1%;
+}
+
+@media (min-width: 850px) {
+    .lista-presentes {
+        width: 60%;
+    }
+}
 
 .titulo-confirma {
     font-size: 300%;

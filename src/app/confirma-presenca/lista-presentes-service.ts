@@ -31,8 +31,8 @@ export class Convidado {
         txtTemplate = '<tr style="color:white;">';
         txtTemplate += `<td>${this.nome}</td>`;
         txtTemplate += `<td>${this.datePipe.transform(this.data, "dd/MM/yyyy HH:mm")}</td>`;
-        txtTemplate += `<td>${this.quantidadeAdultos}</td>`;
-        txtTemplate += `<td>${this.quantidadeCrianca}</td>`;
+        txtTemplate += `<td class='centered'>${this.quantidadeAdultos}</td>`;
+        txtTemplate += `<td class='centered'>${this.quantidadeCrianca}</td>`;
         txtTemplate += '</tr> </br >';
 
         return txtTemplate;

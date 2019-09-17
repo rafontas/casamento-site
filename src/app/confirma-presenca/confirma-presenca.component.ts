@@ -136,6 +136,9 @@ export class ConfirmaPresencaComponent {
     $('.aparece .lista-presentes').removeAttr('hidden');
 
     var novaLista: Convidado[];
+    var totalAdultos : number = 0;
+    var totalCriancas : number = 0;
+
     novaLista = new Array<Convidado>();
 
     for (let i = 0; i < listaConvidados.length; i++) {
@@ -143,12 +146,27 @@ export class ConfirmaPresencaComponent {
       conv.parse(listaConvidados[i]);
       novaLista.push(conv);
 
-      console.log(conv.template());
-      $('.lista-presentes tbody').append(conv.template());
+      totalAdultos += conv.quantidadeAdultos;
+      totalCriancas += conv.quantidadeCrianca;
+
+      // console.log(conv.template());
+      $('.tabela-presentes tbody').append(conv.template());
     }
 
-    // $('.lista-presentes tr').append(value.template());
-    console.log("Veio a lista corretamente.");
+    this.adicionaResumoPresentes(totalAdultos, totalCriancas);
+  }
+
+  private adicionaResumoPresentes (totalAdultos : number, totalCriancas : number) : void 
+  {
+    var htmlResumo : string = `<td class='center'>${totalAdultos}</td>`;
+    htmlResumo += `<td class='center'>${totalCriancas}</td>`;
+
+    $('.tabela-resumo tbody').append(htmlResumo);
+    
+    $('.tabela-resumo td').css('font-family', "'Amatic SC', cursive");
+    $('.tabela-resumo td').css('font-size', '200%');
+    $('.tabela-resumo td').css('font-weight', 'bold');
+    $('.tabela-resumo td').css('letter-spacing', '2px');
   }
 
 }

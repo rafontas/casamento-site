@@ -38,7 +38,7 @@
     }
 }
 
-.lista-presentes th {
+.tabela-presentes th {
     /* font-family: 'Cabin Sketch', cursive;      */
     font-family: 'Amatic SC', cursive;    
     font-size: 150%;
@@ -50,10 +50,6 @@
     color: white;
 }
 
-table._striped > tbody > tr:nth-child(2n+1) {
-    background-color: rgba(242, 242, 242, 0.7);
-}
-
 .lista-presentes {
     padding: 1% 1% 1% 1%;
 }
@@ -62,6 +58,20 @@ table._striped > tbody > tr:nth-child(2n+1) {
     .lista-presentes {
         width: 60%;
     }
+}
+
+.tabela-resumo th {
+    font-family: 'Amatic SC', cursive; 
+    font-size: 150%;
+    color: black;
+}
+
+
+.tabela-resumo {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: black;
+    background-color: rgba(240, 240, 240, 0.7);
 }
 
 .titulo-confirma {

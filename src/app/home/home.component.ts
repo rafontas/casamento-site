@@ -13,9 +13,26 @@ export class HomeComponent {
   constructor() { 
     ColoreToolbarService.coloreToolBar('home');
     setInterval(() => {
-      this.diasAteCasamento = this.calcDiasAteCasamento ()
-    }, 1000);
+      this.diasAteCasamento = this.calcDiasAteCasamento ();
+      this.setTextoDiasCasamentos();
+    }, 100);
   }
+
+  setTextoDiasCasamentos () : void {
+    
+    this.diasAteCasamento = this.calcDiasAteCasamento ();
+  
+    if (this.diasAteCasamento == 0) {
+      $('.txt-faltam-dias').html('É hoje!!!');
+    } 
+    else if (this.diasAteCasamento < 0) {
+      $('.txt-faltam-dias').html('Passou! As fotas estão na galeria! Confere lá!');
+    }
+    else {
+      $('.txt-faltam-dias').html(`Faltam ${this.diasAteCasamento} dias`);
+    }
+  }
+
 
   mostraImagemFundo()  {
     ColoreToolbarService.mostraImagemFundo();

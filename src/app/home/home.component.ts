@@ -28,6 +28,9 @@ export class HomeComponent {
     else if (this.diasAteCasamento < 0) {
       $('.txt-faltam-dias').html('Passou! As fotas estão na galeria! Confere lá!');
     }
+    else if (this.diasAteCasamento == 1) {
+      $('.txt-faltam-dias').html(`Falta ${this.diasAteCasamento} dia`);
+    }
     else {
       $('.txt-faltam-dias').html(`Faltam ${this.diasAteCasamento} dias`);
     }

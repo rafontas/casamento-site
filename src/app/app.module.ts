@@ -17,6 +17,7 @@ import { ConfirmaPresencaService } from './confirma-presenca/confirma-presenca-s
 import { ContatoService } from './contato/contato.service';
 import { ColoreToolbarService } from './colore-toolbar.service';
 import { DatePipe } from '@angular/common';
+import * as $ from 'jquery';
 import { registerLocaleData } from '@angular/common';
 import localeBr from '@angular/common/locales/pt-PT';
 

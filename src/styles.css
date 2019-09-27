@@ -151,3 +151,15 @@ img.bg {
         border-bottom: 1px solid  rgb(239, 83, 80);
         box-shadow: 0 1px 0 0  rgb(239, 83, 80);
     }
+
+    .tabs .indicator {
+        background-color: rgba(0, 150, 150) !important;
+    }
+
+    .tabs .tab a.active {
+        background-color: rgba(13, 13, 13, .1W1) !important;
+    }
+
+    .tab, a.active {
+        color: rgba(0, 150, 150, .7) !important;
+    }

@@ -6,6 +6,23 @@
     z-index: -1;
 }
 
+.tabs {
+    background-color: rgba(220, 220, 220, .7) !important;
+    margin-bottom: 5%;
+}
+
+    .tabs .indicator {
+        background-color: rgba(0, 150, 150) !important;
+    }
+    
+    a.active {
+        background-color: rgba(0, 150, 150, .0001) !important;
+    }
+
+    li a {
+        color: rgba(0, 150, 150, .7) !important;
+    }
+
 div.imglist a {
     margin-right: 5px;
     margin-bottom: 5px;
@@ -17,7 +34,20 @@ div.imglist a {
     font-family: 'Cabin Sketch', cursive;    
     font-size: 220%;
     letter-spacing: 2px !important;
+}
 
+.sem-foto {
+    font-family: 'Cabin Sketch', cursive;    
+    font-size: 220%;
+    letter-spacing: 2px !important;
+}
+
+
+ul.tabs li a {
+    font-family: 'Amatic SC', cursive;
+    font-size: 150% !important;
+    letter-spacing: 2px !important;
+    font-weight: bold;
 }
 
 @media (min-width: 500px) {

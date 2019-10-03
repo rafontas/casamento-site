@@ -87,8 +87,29 @@ export class ConfirmaPresencaComponent {
 
     ColoreToolbarService.iniciaLoading();
 
-    // console.log(this.confirmaPresenca);
-    // return;
+    setTimeout(() => {
+
+      new M.Toast({
+        html: "Te esperamos lá!",
+          displayLength: 5000,
+          classes: "teal lighten-1"
+        });  
+
+      setTimeout(() => {
+        new M.Toast({
+          html: "Com nossa máquina do tempo!&nbsp;&nbsp;&nbsp;<i class='material-icons'> settings_input_antenna </i>",
+            displayLength: 5000,
+            classes: "teal lighten-1"
+          });  
+        }, 2000);
+
+        this.confirmaPresenca = new ConfirmaPresenca();
+        ColoreToolbarService.finalizaLoading();
+        this.limpaValidacao();
+
+      }, 2000);
+
+    return;
 
     this.confirmaPresencaService.saveData(this.confirmaPresenca)
       .pipe(finalize(() => ColoreToolbarService.finalizaLoading()))
@@ -120,7 +141,7 @@ export class ConfirmaPresencaComponent {
 
   finalizaConfirmacao() {
     new M.Toast({
-      html: "Te esperamos lá!",
+      html: "Já passou sô!",
       displayLength: 5000,
       classes: "blue lighten-1"
     });
